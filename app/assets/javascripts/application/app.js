@@ -9,7 +9,6 @@ var Customer = Ember.Object.extend({
 function CustomerDetailsController($scope) {
     var customer = Customer.create({name: 'Íñigo', lastName: 'Montoya'});
     $scope.customer = customer;
-    $scope.hola = {mensaje: 'hola'};
 }
 
 App.controller('CustomerDetailsController', ['$scope', CustomerDetailsController]);
