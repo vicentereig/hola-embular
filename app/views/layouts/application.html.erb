@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HolaEmbular</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="hola-embular">
+    <h2>Customer Details</h2>
+    <div  ng-controller="CustomerDetailsController">
+        <p>
+          Name: {{customer.fullName}}
+        </p>
+        <p>
+          <input type="text" ng-model="customer.name"/>
+          <input type="text" ng-model="customer.lastName"/>
+        </p>
+    </div>
+    <%= javascript_include_tag 'application' %>
+</body>
+</html>
