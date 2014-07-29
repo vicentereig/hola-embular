@@ -6,16 +6,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="hola-embular">
-    <h2>Customer Details</h2>
-    <div  ng-controller="CustomerDetailsController">
-        <p>
-          Name: {{customer.fullName}}
-        </p>
+
+      <div class="jumbotron"  ng-controller="CustomerDetailsController">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <a href="#" class="thumbnail">
+                <img src="http://media.giphy.com/media/b3NBDRChJzot2/giphy.gif"/>
+              </a>
+            </div>
+
+            <div class="col-xs-6 col-md-6">
+              <h1>My Name is {{customer.fullName}}</h1>
+            </div>
+         </div>
+
+        <p>Yup, Ember and Angular can be friends.</p>
+
         <p>
           <input type="text" ng-model="customer.name"/>
           <input type="text" ng-model="customer.lastName"/>
         </p>
-    </div>
+
+
+        </div>
+      </div>
+
     <%= javascript_include_tag 'application' %>
 </body>
 </html>
